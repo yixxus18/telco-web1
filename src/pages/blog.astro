@@ -1,0 +1,150 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import imagen1 from "assets/camaras.jpg";
+import soporte from "assets/soporte.jpg";
+import antivirus from "assets/ciber.jpg";
+import camara from "assets/camaras.jpg";
+import acceso from "assets/teclado-control-de-accesos.jpg";
+import ups from "assets/u.png";
+import camarita from "assets/CCTV.jpg";
+import cableado from "assets/cables.jpg";
+import Seccion from "@components/section.astro";
+---
+
+<Layout title="Blog">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Nuestros servicios</Fragment>
+      <Fragment slot="desc">
+        Aquí te presentamos una vista rápida de los servicios que ofrecemos
+      </Fragment>
+    </Sectionhead>
+    <section aria-labelledby="pricing-section" id="pricing">
+      <div x-data="{ openService: null }" class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-24 scroll-mt-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
+          <!-- Instalación de cámaras de seguridad -->
+          <div class="cursor-pointer group">
+            <img src={soporte.src} @click="openService === 1 ? openService = null : openService = 1" alt="Descripción de la imagen 1" @mouseover="this.style.transform = 'translateY(-5px)'" @mouseleave="this.style.transform = 'translateY(0)'" class="hover:shadow-lg transition:transform hover:scale-110 hover:saturate-150 rounded-lg w-full h-auto object-cover"/>            
+            <button @click="openService === 1 ? openService = null : openService = 1" :class="{ 'text-accent-500': openService === 1, 'text-black': openService !== 1 }" class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none">
+              <span>Soporte Tecnico</span>
+              <svg x-show="openService === 1" class="w-5 h-5 duration-300 ease-out text-accent-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
+              </svg>
+            </button>
+            <div x-show="openService === 1" class="p-4 pt-2 text-zinc-500">
+              <ul style="list-style-position: inside;">
+                  <li>• Instalación de sistemas operativos.</li>
+                  <li>• Instalación de servidores y aplicaciones en red para compartir información.</li>
+                  <li>• Licenciamiento y venta de software especializado.</li>
+                  <li>• Venta y mantenimiento de equipo de cómputo.</li>
+                  <li>• Pólizas de servicio y de mantenimiento.</li>
+              </ul>
+          </div>          
+          </div>
+          <!-- Instalación de fibra óptica -->
+          <div class="cursor-pointer group">
+            <img src={antivirus.src} @click="openService === 2 ? openService = null : openService = 2" alt="Descripción de la imagen 1" @mouseover="this.style.transform = 'translateY(-5px)'" @mouseleave="this.style.transform = 'translateY(0)'" class="hover:shadow-lg transition:transform hover:scale-110 hover:saturate-150 rounded-lg w-800 h-500 object-cover"/>
+            <button @click="openService === 2 ? openService = null : openService = 2" :class="{ 'text-accent-500': openService === 2, 'text-black': openService !== 2 }" class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none">
+              <span>Antivirus y seguridad perimetral</span>
+              <svg x-show="openService === 2" class="w-5 h-5 duration-300 ease-out text-accent-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
+              </svg>
+            </button>
+            <div x-show="openService === 2" class="p-4 pt-2 text-zinc-500">
+              Proporcionamos servicios de instalación y configuración de software antivirus para instituciones, así como la implementación de equipos firewalls con las siguientes capacidades:
+            
+              <ul class="list-disc ml-6">
+                <li>Control de navegación web.</li>
+                <li>Control de aplicaciones https (Facebook, Youtube, Twitter, Kazaa, Ares).</li>
+                <li>Filtro de correo electrónico.</li>
+              </ul>
+            
+              Además, ofrecemos análisis y diseño de redes seguras para garantizar la protección y confiabilidad de tus sistemas.
+            </div>
+          </div>
+          <!-- Instalación de punto a punto -->
+          <div class="cursor-pointer group">
+            <img src={camarita.src} @click="openService === 3 ? openService = null : openService = 3" alt="Descripción de la imagen 1" @mouseover="this.style.transform = 'translateY(-5px)'" @mouseleave="this.style.transform = 'translateY(0)'" class="hover:shadow-lg transition:transform hover:scale-110 hover:saturate-150 rounded-lg object-cover w-full h-auto object-cover"/>
+            <button @click="openService === 3 ? openService = null : openService = 3" :class="{ 'text-accent-500': openService === 3, 'text-black': openService !== 3 }" class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none">
+              <span>CCTV IP</span>
+              <svg x-show="openService === 3" class="w-5 h-5 duration-300 ease-out text-accent-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
+              </svg>
+            </button>
+            <div x-show="openService === 3" class="p-4 pt-2 text-zinc-500">
+              Venta e instalación de equipos análogos, IP y
+              de alta definición.
+              <ul class="list-disc ml-6">
+                <li>Revisión y mantenimiento de equipo CCTV.</li>
+                <li>Integración de equipo CCTV a redes de datos
+                  y sistemas de alarma.</li>
+                <li>Capacitación al personal para manejo de
+                  sistemas y aprovechamiento máximo de los
+                  equipos.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Cableado profesional -->
+          <div class="cursor-pointer group">
+            <img src={acceso.src} @click="openService === 4 ? openService = null : openService = 4" alt="Descripción de la imagen 1" @mouseover="this.style.transform = 'translateY(-5px)'" @mouseleave="this.style.transform = 'translateY(0)'" class="hover:shadow-lg transition:transform hover:scale-110 hover:saturate-150 rounded-lg"/>
+            <button @click="openService === 4 ? openService = null : openService = 4" :class="{ 'text-accent-500': openService === 4, 'text-black': openService !== 4 }" class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none">
+              <span>Control de acceso</span>
+              <svg x-show="openService === 4" class="w-5 h-5 duration-300 ease-out text-accent-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
+              </svg>
+            </button>
+            <div x-show="openService === 4" class="p-4 pt-2 text-zinc-500">
+              <ul class="list-disc ml-6">
+                <li>Venta y configuración de equipo para control
+                  de asistencia.</li>
+                <li>Configuración y capacitación de software para
+                  obtención de reportes con el control de
+                  asistencia.</li>
+                <li>Control de acceso para Instituciones.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cursor-pointer group">
+            <img src={ups.src} @click="openService === 5 ? openService = null : openService = 5" alt="Descripción de la imagen 1" @mouseover="this.style.transform = 'translateY(-5px)'" @mouseleave="this.style.transform = 'translateY(0)'" class="hover:shadow-lg transition:transform hover:scale-110 hover:saturate-150 rounded-lg"/>
+            <button @click="openService === 5 ? openService = null : openService = 5" :class="{ 'text-accent-500': openService === 5, 'text-black': openService !== 5 }" class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none">
+              <span>Soluciones de energia UPS</span>
+              <svg x-show="openService === 5" class="w-5 h-5 duration-300 ease-out text-accent-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
+              </svg>
+            </button>
+            <div x-show="openService === 5" class="p-4 pt-2 text-zinc-500">
+              <ul class="list-disc ml-6">
+                <li>Venta y configuración de equipo UPS para
+                  Instituciones.</li>
+                <li>Mantenimiento correctivo y preventivo.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cursor-pointer group">
+            <img src={cableado.src} @click="openService === 6 ? openService = null : openService = 6" alt="Descripción de la imagen 1" @mouseover="this.style.transform = 'translateY(-5px)'" @mouseleave="this.style.transform = 'translateY(0)'" class="hover:shadow-lg transition:transform hover:scale-110 hover:saturate-150 rounded-lg"/>
+            <button @click="openService === 6 ? openService = null : openService = 6" :class="{ 'text-accent-500': openService === 6, 'text-black': openService !== 6 }" class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none">
+              <span>Fibra Optica y cableado</span>
+              <svg x-show="openService === 6" class="w-5 h-5 duration-300 ease-out text-accent-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
+              </svg>
+            </button>
+            <div x-show="openService === 6" class="p-4 pt-2 text-zinc-500">
+              Nuestro servicio de cableado profesional asegura una instalación ordenada y eficiente, optimizando el rendimiento de tu red.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <Seccion />
+  </Container>
+  
+</Layout>
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<style>
+
+
+</style>

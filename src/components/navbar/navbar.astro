@@ -1,0 +1,67 @@
+---
+import Container from "@components/container.astro";
+import Link from "@components/ui/link.astro";
+import Dropdown from "./dropdown.astro";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import logo from "assets/red1.png";
+const menuitems = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "Nosotros",
+    path: "/about",
+  },
+  {
+    title: "Servicios",
+    path: "/blog",
+  },
+  {
+    title: "Contactanos",
+    path: "/contact",
+  },
+];
+---
+<Container>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <Container>
+    <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+      <Astronav>
+        <div class="flex w-full lg:w-auto items-center justify-between">
+          <a href="/" class="text-lg flex items-center">
+            <img src={logo.src} alt="" style="width: 10%;">
+            <span style="font-family: 'Poppins', sans-serif; margin-left: 10px;">
+              <span style="font-weight: 900; font-size: 1.8em;">TELCO</span><br>
+              <span style="font-size: 1.1em;">NETWORKS</span>
+            </span>
+          </a>
+          <div class="block lg:hidden">
+            <MenuIcon class="w-4 h-4 text-primary-500" />
+          </div>
+        </div>
+        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+          <ul class="flex flex-col lg:flex-row lg:gap-3 ">
+            {
+              menuitems.map((item, index) => (
+                <li key={index}>
+                  <a
+                    href={item.path}
+                    class="flex lg:px-4 py-2 items-center text-primary-700 hover:text-primary-900 transition-all duration-300 ease-in-out bg-primary-100 hover:bg-primary-200 rounded-md shadow-none hover:shadow-lg transition:transform hover:scale-110">
+                    <span class="font-semibold">{item.title}</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </MenuItems>
+      </Astronav>
+      <div>
+        
+      </div>
+    </header>
+    <hr>
+  </Container>
+</Container>
+  

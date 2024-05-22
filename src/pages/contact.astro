@@ -1,0 +1,55 @@
+---
+import Contactform from "@components/contactform.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Contactanos</Fragment>
+      <Fragment slot="desc">Estamos aquí para ayudarte y resolver tus dudas.</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h1 class="font-bold text-3xl text-gray-800 font-poppins">Telco Networks</h1>
+        <p class="text-lg text-gray-700 mb-4">
+          Si tienes alguna duda o deseas realizar una consulta, no dudes en contactarnos. Estamos aquí para asistirte.
+        </p>
+        <h2 class="font-medium text-2xl text-gray-800">Contactos de Telco Networks</h2>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600 text-lg">
+            <Icon class="text-gray-400 w-9 h-9" name="uil:map-marker" />
+            <a href="https://www.google.com/maps/search/?api=1&query=Calz+Moctezuma+312,+Francisco+Villa,+27050+Torreón,+Coah." target="_blank" class="text-gray-600 hover:text-gray-800">
+              <span>Calz Moctezuma 312, Francisco Villa, 27050 Torreón, Coah.</span>
+            </a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600 text-lg">
+            <Icon class="text-gray-400 w-6 h-6" name="uil:envelope" />
+            <a href="mailto:contacto@telcolaguna.com.mx" target="_blank">contacto@telcolaguna.com.mx</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600 text-lg">
+            <Icon class="text-gray-400 w-6 h-6" name="uil:envelope" />
+            <a href="mailto:ventas@telcolaguna.com.mx" target="_blank">ventas@telcolaguna.com.mx</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600 text-lg">
+            <Icon class="text-gray-400 w-6 h-6" name="uil:phone" />
+            <a href="tel:+52 (871) 4587 899">+52 (871) 7207 988</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600 text-lg">
+            <Icon class="text-gray-400 w-6 h-6" name="uil:phone" />
+            <a href="tel:+52 (871) 7322 425">+52 (871) 7322 425</a>
+          </div>
+        </div>  
+      </div>
+      <div>
+        <br>
+        <hr>
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+</Layout>

@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Honestidad",
+    description:
+      "La honestidad en el trabajo es ser transparente y ético en todas nuestras acciones laborales, construyendo confianza y respeto en el equipo.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Innovacion",
+    description:
+      "La innovación en Telco Networks crea valor al mejorar productos y procesos, aumentando la competitividad y fomentando el crecimiento.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Compromiso",
+    description:
+      "Esforzarse por alcanzar los más altos estándares de calidad en todo momento. ",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Trabajo en equipo",
+    description:
+      "Trabajar en equipo para lograr objetivos comunes y resolver desafíos de manera conjunta.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "Escucha activa",
+    description:
+      "La escucha activa en una empresa mejora la comunicación, fomenta la colaboración y aumenta la satisfacción de empleados y clientes, creando un entorno más productivo y armonioso.",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "Responsabilidad",
+    description:
+      "sumir la responsabilidad de las acciones y decisiones, buscando siempre hacer lo correcto.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Valores que existen en Telco Networks.
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Nuestros valores son la esencia de Telco Networks, reflejando nuestra integridad y compromiso diario. Nos guían en cada decisión, asegurando excelencia y responsabilidad. Así, construimos relaciones de confianza y respeto con todos nuestros clientes y socios.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

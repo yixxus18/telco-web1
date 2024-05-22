@@ -1,0 +1,32 @@
+---
+import redes from "assets/calidad.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+---
+
+<main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+    <!-- Contenedor de la imagen -->
+    <div class="py-6 lg:order-first">
+      <div class="carousel-container relative">
+        <div class="carousel-slide">
+          <!-- Asegúrate de que 'redes.src' apunte a una fuente de imagen válida -->
+          <img src={redes.src} alt="Imagen 3" class="w-full h-full object-cover object-center rounded-md bg-white hover:shadow-lg transition:transform hover:scale-105 hover:saturate-150" style="border-radius: 25px;" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenedor del texto -->
+    <div>
+      <h1 class="text-3xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
+        Visión
+      </h1>
+      <p class="text-lg mt-4 text-slate-600 max-w-xl">
+          Ser reconocidos como empresa líder
+          del mercado y primera elección en
+          soluciones de tecnologías de la
+          información a nivel local y regional
+          ofreciendo experiencia y calidad en
+          nuestros servicios.
+      </p>
+    </div>
+</main>

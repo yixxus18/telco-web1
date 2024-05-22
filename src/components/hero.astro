@@ -1,0 +1,120 @@
+---
+import heroImage1 from "assets/telecomunicaciones.jpg";
+import heroImage2 from "assets/hero-alt.png"; // Asegúrate de tener más imágenes
+import heroImage3 from "assets/hero.png"; // Asegúrate d
+import heroImage4 from "assets/Camaras.jpg"; // Asegúrate de tener más imágenes
+import antena from "assets/antena.jpg";
+import servidor from "assets/servidor.jpg";
+import redes from "/public/red.jpg";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+---
+
+<main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 block">
+    <div class="carousel-container relative w-full lg:w-[800px]"> <!-- Ajusta el ancho según tus necesidades -->
+      <div class="carousel-slide"> 
+        <img src={heroImage1.src} alt="Imagen 1" class="w-full h-full object-cover object-center rounded-md bg-white " />
+      </div>
+      <div class="carousel-slide">
+        <img src={antena.src} alt="Imagen 3" class="w-full h-full object-cover object-center rounded-md bg-white" />
+      </div>
+      <div class="carousel-slide">
+        <img src={redes.src} alt="Imagen 3" class="w-full h-full object-cover object-center rounded-md bg-white" />
+      </div>
+      <div class="carousel-slide">
+        <img src={heroImage4.src} alt="Imagen 3" class="w-full h-full object-cover object-center rounded-md bg-white" />
+      </div>
+      <div class="carousel-slide">
+        <img src={servidor.src} alt="Imagen 3" class="w-full h-full object-cover object-center rounded-md bg-white" />
+      </div>
+      <!-- Add Navigation -->
+      <button class="carousel-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">‹</button>
+      <button class="carousel-button-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">›</button>
+    </div>
+  </div>
+  <div>
+    <h1 class="text-10xl lg:text-8xl xl:text-10xl font-bold lg:tracking-tight xl:tracking-tighter text-center">
+      <div>Telco</div>
+      <div>Networks</div>
+    </h1>
+    <hr>
+    <div class="text-lg mt-4 text-slate-600 max-w-xl mx-auto">
+      <div class="flex justify-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+          <div><a href="/blog" class="text-gray-500 hover:underline">Telecomunicaciones</a></div>
+          <div><a href="/blog" class="text-gray-500 hover:underline">Cableado estructurado</a></div>
+          <div><a href="/blog" class="text-gray-500 hover:underline">Telefonía digital/IP</a></div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-4">
+        <div><a href="/blog" class="text-gray-500 hover:underline">CCTV IP/Seguridad</a></div>
+      </div>
+    </div>
+</main>
+
+<style>
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1700px; /* Ajusta el ancho máximo según tus necesidades */
+    height: 400px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+  }
+  .carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-slide.active {
+    display: block;
+  }
+  .carousel-button-prev, .carousel-button-next {
+    cursor: pointer;
+  }
+
+  .carousel-slide img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-radius: 25px; /* Añade bordes redondeados a las imágenes */
+  }
+</style>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+  const totalSlides = slides.length;
+
+  function showNextSlide() {
+    if (slides[currentSlide]) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % totalSlides;
+      if (slides[currentSlide]) {
+        slides[currentSlide].classList.add('active');
+      }
+    }
+  }
+
+  document.querySelectorAll('.carousel-button-next').forEach(button => {
+    button.addEventListener('click', showNextSlide);
+  });
+
+  document.querySelectorAll('.carousel-button-prev').forEach(button => {
+    button.addEventListener('click', () => {
+      if (slides[currentSlide]) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        if (slides[currentSlide]) {
+          slides[currentSlide].classList.add('active');
+        }
+      }
+    });
+  });
+
+  // Initialize the first slide as active
+  slides[currentSlide].classList.add('active');
+
+  // Set interval to change slide every 3 seconds
+  setInterval(showNextSlide, 3500);
+</script>
