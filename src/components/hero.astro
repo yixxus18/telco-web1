@@ -1,13 +1,10 @@
 ---
 import heroImage1 from "assets/telecomunicaciones.jpg";
-import heroImage2 from "assets/hero-alt.png"; // Asegúrate de tener más imágenes
-import heroImage3 from "assets/hero.png"; // Asegúrate d
 import heroImage4 from "assets/Camaras.jpg"; // Asegúrate de tener más imágenes
 import antena from "assets/antena.jpg";
 import servidor from "assets/servidor.jpg";
 import redes from "/public/red.jpg";
-import Link from "@components/ui/link.astro";
-import { Icon } from "astro-icon";
+import fondito2 from "assets/fond.jpg";
 ---
 
 <main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
@@ -27,6 +24,9 @@ import { Icon } from "astro-icon";
       </div>
       <div class="carousel-slide">
         <img src={servidor.src} alt="Imagen 3" class="w-full h-full object-cover object-center rounded-md bg-white" />
+      </div>
+      <div class="carousel-slide">
+        <img src={fondito2.src} alt="Imagen 3" class="w-full h-full object-cover object-center rounded-md bg-white" />
       </div>
       <!-- Add Navigation -->
       <button class="carousel-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">‹</button>
