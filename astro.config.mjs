@@ -5,6 +5,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "/",
+  site: "https://telco-web.vercel.app",
   integrations: [tailwind(), mdx(), sitemap()],
 });
