@@ -28,7 +28,7 @@ import Seccion from "@components/section.astro";
           <div class="cursor-pointer group">
             <img src={soporte.src} @click="openService === 1 ? openService = null : openService = 1" alt="Descripción de la imagen 1" @mouseover="this.style.transform = 'translateY(-5px)'" @mouseleave="this.style.transform = 'translateY(0)'" class="hover:shadow-lg transition:transform hover:scale-110 hover:saturate-150 rounded-lg w-full h-auto object-cover"/>            
             <button @click="openService === 1 ? openService = null : openService = 1" :class="{ 'text-accent-500': openService === 1, 'text-black': openService !== 1 }" class="flex items-center justify-between w-full p-4 pb-1 text-left font-medium select-none">
-              <span>Soporte Tecnico</span>
+              <span>Soporte Técnico</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" :class="{ '-rotate-180': openService === 1 }">
                 <path d="M6 9l6 6 6-6"/>
               </svg>
@@ -54,7 +54,7 @@ import Seccion from "@components/section.astro";
             </button>
             <div x-show="openService === 2" class="p-4 pt-2 text-zinc-500">
               Proporcionamos servicios de instalación y configuración de software antivirus para instituciones, así como la implementación de equipos firewalls con las siguientes capacidades:
-            
+                                              
               <ul class="list-disc ml-6">
                 <li>Control de navegación web.</li>
                 <li>Control de aplicaciones https (Facebook, Youtube, Twitter, Kazaa, Ares).</li>
