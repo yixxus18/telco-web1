@@ -10,7 +10,7 @@ import fondito from "assets/fong.jpg";
 ---
 
 <Layout title="Nosotros">
-  <div style={`position: relative; background-image: url(${cables.src}); background-attachment: fixed; background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`}>
+  <div style="position: relative; background-image: url(${cables.src}); background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;">
     <div style="background-color: rgba(0, 0, 0, 0.3); position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></div>
     
     <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 100%;">
@@ -19,21 +19,17 @@ import fondito from "assets/fong.jpg";
       </h2>
     </div>
   </div>
-  
-    
-  </div>
+
   <Container>
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 font-poppins text-justify">
       <h2 class="font-bold text-5xl text-gray-800 text-center" style="filter: none;">
         Que es Telco Networks?
       </h2>
       <p class="text-3xl leading-relaxed text-slate-500">
-        <p></p>
         Somos especialistas en el diseño y gestión de soluciones integrales en
         telecomunicaciones, cableado estructurado, sistemas de seguridad, telefonía
         digital, equipo activo, calidad de la energía, sistemas de detección/supresión de
         incendios.
-        <p></p>
         Contamos con una experiencia sólida de más de 30 años, respaldada por la
         exitosa ejecución de proyectos en diversos sectores, como el bancario,
         comercial, manufacturero, así como en instituciones y dependencias
@@ -41,25 +37,25 @@ import fondito from "assets/fong.jpg";
         duraderas con cada uno de nuestros clientes, demostrando nuestra capacidad
         para ofrecer soluciones confiables y personalizadas que impulsan el éxito y la
         eficiencia en sus operaciones.
-        <p></p>
         En TELCO, estamos comprometidos a seguir liderando en la vanguardia
         tecnológica y a ser el socio confiable que contribuye al crecimiento y el logro de
         los objetivos de nuestros clientes.
       </p>
     </div>
+
     <br><br>
-    <img src={cableado.src} class="mx-auto rounded-xl hover:shadow-lg transition:transform hover:scale-110 hover:saturate-150" style="width: 600px; height: 250px; border-radius: 25px;">
+
+    <img src=${cableado.src} class="mx-auto rounded-xl hover:shadow-lg transition:transform hover:scale-110 hover:saturate-150" style="width: 600px; height: 250px; border-radius: 25px;">
+
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 font-poppins text-justify">
       <h2 class="font-bold text-5xl text-gray-800 text-center">
         Historia
       </h2>
       <p class="text-2xl leading-relaxed text-slate-500 font-poppins">
-        <p></p>
         Somos especialistas en el diseño y gestión de soluciones integrales en
         telecomunicaciones, cableado estructurado, sistemas de seguridad, telefonía
         digital, equipo activo, calidad de la energía, sistemas de detección/supresión de
         incendios.
-        <p></p>
         Contamos con una experiencia sólida de más de 30 años, respaldada por la
         exitosa ejecución de proyectos en diversos sectores, como el bancario,
         comercial, manufacturero, así como en instituciones y dependencias
@@ -67,16 +63,16 @@ import fondito from "assets/fong.jpg";
         duraderas con cada uno de nuestros clientes, demostrando nuestra capacidad
         para ofrecer soluciones confiables y personalizadas que impulsan el éxito y la
         eficiencia en sus operaciones.
-        <p></p>
         En TELCO, estamos comprometidos a seguir liderando en la vanguardia
         tecnológica y a ser el socio confiable que contribuye al crecimiento y el logro de
         los objetivos de nuestros clientes.
       </p>
     </div>
-    <br>
-    <br>
+
+    <br><br>
   </Container>
-  <div style={`position: relative; background-image: url(${fondito2.src}); background-attachment: fixed; background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`}>
+
+  <div style="position: relative; background-image: url(${fondito2.src}); background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;">
     <div style="background-color: rgba(0, 0, 0, 0.3); position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></div>
     
     <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 100%;">
@@ -85,10 +81,11 @@ import fondito from "assets/fong.jpg";
       </h2>
     </div>
   </div>
+
   <Container>
-    
     <Mision />
     <Vision />
   </Container>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </Layout>
