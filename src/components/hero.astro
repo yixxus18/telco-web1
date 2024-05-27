@@ -33,11 +33,12 @@ import fondito2 from "assets/fong.jpg";
       <button class="carousel-button-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">›</button>
     </div>
   </div>
-  <div>
-    <h1 class="text-10xl lg:text-8xl xl:text-10xl font-bold lg:tracking-tight xl:tracking-tighter text-center">
+  <div class="title-container">
+    <h1 class="title text-10xl lg:text-8xl xl:text-10xl font-bold lg:tracking-tight xl:tracking-tighter text-center">
       <div>Telco</div>
       <div>Networks</div>
     </h1>
+
     <hr>
     <div class="text-lg mt-4 text-slate-600 max-w-xl mx-auto">
       <div class="flex justify-center">
@@ -73,6 +74,18 @@ import fondito2 from "assets/fong.jpg";
   .carousel-button-prev, .carousel-button-next {
     cursor: pointer;
   }
+
+  .title-container {
+  display: inline-block;
+}
+
+.title {
+  transition: text-shadow 0.3s ease;
+}
+
+.title div:hover {
+  text-shadow: 2px 2px 8px #4ad6bb;
+}
 
   .carousel-slide img {
     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
