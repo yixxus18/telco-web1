@@ -18,7 +18,7 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Telco"
+  ? title + " " + "Telco"
   : "Telco Networks";
 ---
 
@@ -28,7 +28,7 @@ const makeTitle = title
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href={fond.src} />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Telco Networks" />
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
