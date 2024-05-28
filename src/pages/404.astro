@@ -1,13 +1,21 @@
 ---
 import Container from "@components/container.astro";
 import Layout from "@layouts/Layout.astro";
+import mant from "@assets/mant.png";
 ---
 
-
-    <div class="min-h-[calc(100vh-16rem)] flex items-center justify-center">
-      <div class="mt-16 text-center">
-        <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">404</h1>
-        <p class="text-lg mt-4 text-slate-600">Page not found.</p>
+<Layout title="404 Not Found">
+  <Container>
+    <div class="min-h-[calc(100vh-16rem)] flex flex-col items-center justify-center font-poppins">
+    <div class="mt-16 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight font-poppins">En Mantenimiento</h1>
+      <p class="text-lg mt-4 text-slate-600 font-poppins">Disculpa las molestias, estamos trabajando para mejorar la página. ¡Vuelve pronto!</p>
+      <br>
+      <div style="background-color: transparent; display: flex; justify-content: center;">
+        <img src={mant.src} alt="Imagen Estética" class="mt-8 rounded-lg " style="max-width: 80%; height: auto;">
       </div>
     </div>
-
+  </div>
+  <br>
+  </Container>
+</Layout>
