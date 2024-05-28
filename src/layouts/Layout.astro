@@ -11,14 +11,14 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "assets/red1.png",
   Astro.site
 ).toString(); 
 
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " " + "Telco"
+  ? title 
   : "Telco Networks";
 ---
 
@@ -28,7 +28,22 @@ const makeTitle = title
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href={fond.src} />
-    <meta name="description" content="Telco Networks" />
+    <meta name="description" content="Somos especialistas en el diseño y gestión de soluciones integrales en telecomunicaciones, cableado estructurado, sistemas de seguridad, telefonía digital, equipo activo, calidad de la energía, sistemas de detección/supresión de incendios." />
+    <meta name="keywords" content="Telecomunicaciones Cableado Estructurado Sistemas de Seguridad Telefonía Digital Equipo Activo Calidad de la Energía Sistemas de Detección Supresión de Incendios" />
+    <meta name="author" content="Telco Networks" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <meta property="og:title" content={makeTitle} />
+    <meta property="og:description" content="Somos especialistas en el diseño y gestión de soluciones integrales en telecomunicaciones, cableado estructurado, sistemas de seguridad, telefonía digital, equipo activo, calidad de la energía, sistemas de detección/supresión de incendios." />
+    <meta property="og:image" content={resolvedImageWithDomain} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <SEO
+      title={makeTitle}
+      description="Telco Networks Solutions"
+      canonical={canonicalURL}
+    />
   </head>
   <body>
     <Navbar />
@@ -42,8 +57,8 @@ const makeTitle = title
       }
 
       body {
-  background: linear-gradient(to top left, #4AD6BB, #FFF3CC, #FFFDF5);
-}
+        background: linear-gradient(to top left, #4AD6BB, #FFF3CC, #FFFDF5);
+      }
     </style>
   </body>
 </html>
