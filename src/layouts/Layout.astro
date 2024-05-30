@@ -9,13 +9,22 @@ import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
 
 import fond from "assets/red1.png";  
-
+import faviconSvgSrc from 'assets/red1.svg'
 export interface Props {
 
   title: string;
 
 }
 
+import { getImage } from "astro:assets";
+
+const appleTouchIcon = await getImage({
+  src: fond,
+  width: 180,
+  height: 180,
+  format: 'png'
+})
+const faviconSvg = await getImage({ src: faviconSvgSrc, format: 'svg' })
 
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -55,8 +64,8 @@ const makeTitle = title
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width" />
-
-    <link rel="icon" href="https://telco-networks.mx/_astro/red1.c617f45f.png" type="image/png">
+    <link rel="icon" href={appleTouchIcon.src} type="image/png" />
+    <link rel="apple-touch-icon" href={appleTouchIcon.src} />
 
     <meta name="google-site-verification" content="yIXhbzGQtq-QOlhNOLg8GuD4SxxqMAUmdKFwMwzvKoA" />
 
