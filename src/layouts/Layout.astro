@@ -1,64 +1,141 @@
 ---
+
 import { SEO } from "astro-seo";
+
 import Footer from "@components/footer.astro";
+
 import Navbar from "@components/navbar/navbar.astro";
+
 import "@fontsource-variable/inter/index.css";
+
 import fond from "assets/red1.png";  
+
 export interface Props {
+
   title: string;
+
 }
+
+
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
+
+
 const resolvedImageWithDomain = new URL(
-  "assets/red1.png",
+
+  fond.src,
+
   Astro.site
+
 ).toString(); 
+
+
 
 const { title } = Astro.props;
 
+
+
 const makeTitle = title
+
   ? title 
+
   : "Telco Networks";
+
 ---
 
+
+
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
+
   <head>
+
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href={fond.src} />
-    <meta name="description" content="Somos especialistas en el diseño y gestión de soluciones integrales en telecomunicaciones, cableado estructurado, sistemas de seguridad, telefonía digital, equipo activo, calidad de la energía, sistemas de detección/supresión de incendios." />
-    <meta name="keywords" content="Telecomunicaciones Cableado Estructurado Sistemas de Seguridad Telefonía Digital Equipo Activo Calidad de la Energía Sistemas de Detección Supresión de Incendios" />
+
+    <link rel="icon" href="https://telco-networks.mx/_astro/red1.c617f45f.png" type="image/png">
+
+    <meta name="google-site-verification" content="yIXhbzGQtq-QOlhNOLg8GuD4SxxqMAUmdKFwMwzvKoA" />
+
+    <meta name="description" content="Telco Networks especialistas en diseño y gestion
+    telecomunicaciones, cableado estructurado, sistemas de seguridad y calidad de la energía." />
+
+    <meta name="keywords" content="Telco Networks , Telco , Networks ,telecomunicaciones, cableado estructurado, sistemas de seguridad, telefonía digital, equipo activo, calidad de la energía, sistemas de detección, supresión de incendios, instalación de cableado estructurado, seguridad en telecomunicaciones">
+
     <meta name="author" content="Telco Networks" />
+
     <meta name="robots" content="index, follow" />
+
     <meta name="googlebot" content="index, follow" />
+
     <meta name="bingbot" content="index, follow" />
-    <meta property="og:title" content={makeTitle} />
-    <meta property="og:description" content="Somos especialistas en el diseño y gestión de soluciones integrales en telecomunicaciones, cableado estructurado, sistemas de seguridad, telefonía digital, equipo activo, calidad de la energía, sistemas de detección/supresión de incendios." />
-    <meta property="og:image" content={resolvedImageWithDomain} />
+
+    <meta name="title" content="Telco Networks" />
+
+    <meta property="og:title" content="Telco Networks" />
+
+    <meta property="og:image" content={fond.src} />
+
     <meta property="og:url" content={canonicalURL} />
+
     <meta property="og:type" content="website" />
-    <SEO
-      title={makeTitle}
-      description="Telco Networks Solutions"
-      canonical={canonicalURL}
-    />
+
+    <title>Telco Networks. Torreon , Coahuila.</title>
+    
+
   </head>
+
+ 
+
   <body>
+
     <Navbar />
+
     <slot />
+
     <Footer />
+
     <style is:global>
+
       /* Improve Page speed */
+
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+
       img {
+
         content-visibility: auto;
+
       }
 
+
+
       body {
+
         background: linear-gradient(to top left, #4AD6BB, #FFF3CC, #FFFDF5);
+
       }
+
     </style>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y129GZMRX"></script>
+
+<script>
+  // Asegurarse de que dataLayer existe en el objeto window
+  window['dataLayer'] = window['dataLayer'] || [];
+
+  // Definir la función gtag para usar window['dataLayer']
+  function gtag(...args) {
+    window['dataLayer'].push(args);
+  }
+
+  // Llamar a gtag con los argumentos adecuados
+  gtag('js', new Date());
+  gtag('config', 'G-9Y129GZMRX');
+</script>
   </body>
+
 </html>
