@@ -1,133 +1,218 @@
 ---
+
 import heroImage1 from "assets/telecomunicaciones.jpg";
+
 import heroImage4 from "assets/Camaras.jpg"; // Asegúrate de tener más imágenes
-import antena from "assets/antena.jpg";
+
+import antena from "assets/ant.jpg";
+
 import servidor from "assets/servidor.jpg";
+
 import redes from "/public/red.jpg";
-import fondito2 from "assets/fong.jpg";
+
+import fondito2 from "assets/CCTV.jpg";
+
 ---
 
-<main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 block">
-    <div class="carousel-container relative w-full lg:w-[800px]"> <!-- Ajusta el ancho según tus necesidades -->
+  <div>
+
+    <div class="carousel-container "> <!-- Ajusta el ancho según tus necesidades -->
+
       <div class="carousel-slide"> 
-        <img src={heroImage1.src} alt="Redes" class="w-full h-full object-cover object-center rounded-md bg-white " />
+
+        <img src={heroImage1.src} alt="Redes Telco" />
+        
+
       </div>
+
       <div class="carousel-slide">
-        <img src={antena.src} alt="Cableado Estructurado" class="w-full h-full object-cover object-center rounded-md bg-white" />
+
+        <img src={antena.src} alt="Cableado Estructurado Telco" />
+
       </div>
+
       <div class="carousel-slide">
-        <img src={redes.src} alt="Telecomunicaciones" class="w-full h-full object-cover object-center rounded-md bg-white" />
+
+        <img src={redes.src} alt="Telecomunicaciones Telco"  />
+
       </div>
+
       <div class="carousel-slide">
-        <img src={heroImage4.src} alt="Sistemas de seguridad" class="w-full h-full object-cover object-center rounded-md bg-white" />
+
+        <img src={heroImage4.src} alt="Sistemas de seguridad Telco"  />
+
       </div>
+
       <div class="carousel-slide">
-        <img src={servidor.src} alt="Telco Networks" class="w-full h-full object-cover object-center rounded-md bg-white" />
+
+        <img src={servidor.src} alt="Telco Networks"  />
+
       </div>
+
       <div class="carousel-slide">
-        <img src={fondito2.src} alt="Telefonia Digital" class="w-full h-full object-cover object-center rounded-md bg-white" />
+
+        <img src={fondito2.src} alt="Telefonia Digital"  />
+
       </div>
-      <!-- Add Navigation -->
-      <button class="carousel-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">‹</button>
-      <button class="carousel-button-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">›</button>
+
     </div>
+
+    <!-- Botones de navegación -->
+    <button class="carousel-button-prev">
+      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+      </svg>
+    </button>
+    <button class="carousel-button-next">
+      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+      </svg>
+    </button>
+
+    <br>
+    <h1 class="text-center text-3xl font-bold">Soluciones y Servicios</h1>
+
   </div>
-  <div class="title-container">
-    <h1 class="title text-10xl lg:text-8xl xl:text-10xl font-bold lg:tracking-tight xl:tracking-tighter text-center">
-      Telco Networks
-    </h1>
 
-    <hr>
-    <div class="text-lg mt-4 text-slate-600 max-w-xl mx-auto">
-      <div class="flex justify-center">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-          <div><a href="/blog" class="text-gray-500 hover:underline">Telecomunicaciones</a></div>
-          <div><a href="/blog" class="text-gray-500 hover:underline">Cableado estructurado</a></div>
-          <div><a href="/blog" class="text-gray-500 hover:underline">Telefonía digital/IP</a></div>
-        </div>
-      </div>
-      <div class="flex justify-center mt-4">
-        <div><a href="/blog" class="text-gray-500 hover:underline">CCTV IP/Seguridad</a></div>
-      </div>
-    </div>
-  </div>
-</main>
 
-<style>
-  .carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 1700px; /* Ajusta el ancho máximo según tus necesidades */
-    height: 400px; /* Ajusta la altura según tus necesidades */
-    overflow: hidden;
-  }
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    height: 100%;
-  }
-  .carousel-slide.active {
-    display: block;
-  }
-  .carousel-button-prev, .carousel-button-next {
-    cursor: pointer;
-  }
 
-  .title-container {
-  display: inline-block;
-}
+  <style>
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
+      height: auto; /* Ajusta la altura automáticamente según el contenido */
+      overflow: hidden;
+    }
+  
+    .carousel-slide {
+      position: relative;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      height: 75vh;
+      margin-left: 0;
+      margin-right: 0;
+      display: none; /* Oculta todas las imágenes por defecto */
+    }
+  
+    .carousel-slide.active {
+      display: block; /* Muestra solo la imagen activa */
+    }
+  
+    .carousel-slide img {
+      width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+      height: 100%; /* Ajusta la altura para que ocupe todo el contenedor */
+      object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    }
+  
+    .carousel-button-prev, .carousel-button-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+  
+    .carousel-button-prev {
+      left: 0px;
+    }
+  
+    .carousel-button-next {
+      right: 0px;
+    }
+  
+    .title-container {
+      display: inline-block;
+    }
+  
+    .title {
+      transition: text-shadow 0.3s ease;
+    }
+  
+    .title div:hover {
+      text-shadow: 2px 2px 8px #4ad6bb;
+    }
 
-.title {
-  transition: text-shadow 0.3s ease;
-}
+    
+  </style>
 
-.title div:hover {
-  text-shadow: 2px 2px 8px #4ad6bb;
-}
 
-  .carousel-slide img {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-    height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
-    border-radius: 25px; /* Añade bordes redondeados a las imágenes */
-  }
-</style>
 
 <script>
+
   let currentSlide = 0;
+
   const slides = document.querySelectorAll('.carousel-slide');
+
   const totalSlides = slides.length;
 
+
+
   function showNextSlide() {
+
     if (slides[currentSlide]) {
+
       slides[currentSlide].classList.remove('active');
+
       currentSlide = (currentSlide + 1) % totalSlides;
+
       if (slides[currentSlide]) {
+
         slides[currentSlide].classList.add('active');
+
       }
+
     }
+
   }
 
+
+
   document.querySelectorAll('.carousel-button-next').forEach(button => {
+
     button.addEventListener('click', showNextSlide);
+
   });
+
+
 
   document.querySelectorAll('.carousel-button-prev').forEach(button => {
+
     button.addEventListener('click', () => {
+
       if (slides[currentSlide]) {
+
         slides[currentSlide].classList.remove('active');
+
         currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+
         if (slides[currentSlide]) {
+
           slides[currentSlide].classList.add('active');
+
         }
+
       }
+
     });
+
   });
 
+
+
   // Initialize the first slide as active
+
   slides[currentSlide].classList.add('active');
 
+
+
   // Set interval to change slide every 3 seconds
+
   setInterval(showNextSlide, 3500);
+
 </script>
