@@ -19,12 +19,16 @@ import camara from "assets/cams.png";
 import acceso from "assets/cyber-security.png";
 
 import proteger from "assets/shield.png";
+
+import telco from "assets/TNW.jpg"
+
+import t2 from "assets/t2.jpg"
 ---
 
 <div>
   <div class="carousel-container"> <!-- Ajusta el ancho según tus necesidades -->
     <div class="carousel-slide">
-      <img src={heroImage1.src} alt="Redes Telco" />
+      <img src={telco.src} alt="Redes Telco" />
       
     </div>
     <div class="carousel-slide">
@@ -32,7 +36,7 @@ import proteger from "assets/shield.png";
       
     </div>
     <div class="carousel-slide">
-      <img src={redes.src} alt="Telecomunicaciones Telco" />
+      <img src={heroImage1.src} alt="Telecomunicaciones Telco" />
       
     </div>
     <div class="carousel-slide">
@@ -184,5 +188,5 @@ import proteger from "assets/shield.png";
   slides[currentSlide].classList.add('active');
 
   // Set interval to change slide every 3 seconds
-  setInterval(showNextSlide, 3500);
+  setInterval(showNextSlide, 4000);
 </script>
