@@ -22,7 +22,7 @@ import acceso from "assets/cyber-security.png";
 
 import proteger from "assets/shield.png";
 
-import telco from "assets/telco.jpg"
+import telco from "assets/tecis.jpg"
 
 import t2 from "assets/t2.jpg"
 ---
@@ -31,7 +31,7 @@ import t2 from "assets/t2.jpg"
   <div class="carousel-container"> <!-- Ajusta el ancho según tus necesidades -->
     <div class="carousel-slide">
       <img src={telco.src} alt="Redes Telco" />
-      <h1 style="position: absolute; top: 55%; left: 55%;transform: translate(-50%, -50%); " class="text-white font-bold text-3xl text-stroke line-clamp-12 text-center">En <p class="text-teal-400">Telco Networks</p>, somos una empresa reconocida con mas de 30 años de experienciaz en el mundo de las <p class="text-teal-400">Telecomunicaciones.</p></h1>
+      <h1 style="position: absolute; top: 30%; left: 8%; " class="text-white font-bold text-3xl line-clamp-12 text-center">En<p class="text-teal-400"> Telco Networks</p> somos una empresa reconocida <p></p> con mas de 30 años de experiencia <p></p> en el mundo de las <p class="text-teal-400"> Telecomunicaciones</p></h1>
       
     </div>
     <div class="carousel-slide">
@@ -158,6 +158,17 @@ import t2 from "assets/t2.jpg"
 
 .carousel-button-next {
   right: 10px; /* Ajusta la distancia del botón derecho al borde */
+}
+
+@media (max-width: 520px) {
+  .carousel-slide h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    transform: translateY(-50%); /* Ajusta la posición vertical del texto */
+    margin-right: 200px;
+    padding: 10px;
+    position: absolute;
+    display: block;
+  }
 }
 </style>
 
