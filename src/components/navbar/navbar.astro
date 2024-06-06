@@ -23,31 +23,29 @@ const menuitems = [
 ---
 <Container>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <Container>
-    <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+    <header class="flex flex-col lg:flex-row justify-between items-center my-2">
       <Astronav>
         <div class="flex w-full lg:w-auto items-center justify-between">
           <a href="/" class="text-lg flex items-center">
             <img src={logo.src} alt="Logo Telco-Networks" style="width: 10%;">
             <span style="font-family: 'Poppins', sans-serif; margin-left: 10px;">
-              <h2 class="font-black text-2xl leading-tight">
+              <h2 class="font-black text-xl leading-tight">
                 TELCO<br />NETWORKS
               </h2>
             </span>
           </a>
           <div class="block lg:hidden">
-            <MenuIcon class="w-4 h-4 text-primary-500" />
+            <MenuIcon class="w-6 h-6 text-primary-500" />
           </div>
         </div>
-        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0 color-teal-400">
           <ul class="flex flex-col lg:flex-row lg:gap-3 ">
             {
               menuitems.map((item, index) => (
                 <li key={index}>
                   <a
                     href={item.path}
-                    class="flex lg:px-4 py-2 items-center text-primary-700 hover:text-primary-900 transition-all duration-300 ease-in-out bg-primary-100 hover:bg-primary-200 rounded-md shadow-none hover:shadow-lg transition:transform hover:scale-110">
+                    class="flex lg:px-4 py-2 items-center text-primary-700 hover:text-primary-900 transition-all duration-300 ease-in-out bg-primary-100 hover:bg-primary-200 rounded-md shadow-none hover:shadow-lg transition:transform hover:scale-110 color-teal-400">
                     <span class="font-semibold">{item.title}</span>
                   </a>
                 </li>
@@ -56,11 +54,9 @@ const menuitems = [
           </ul>
         </MenuItems>
       </Astronav>
-      <div>
-        
-      </div>
     </header>
-    <hr>
-  </Container>
+
+    
+  
 </Container>
   

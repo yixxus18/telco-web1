@@ -28,7 +28,7 @@ import t2 from "assets/t2.jpg"
 ---
 
 <div>
-  <div class="carousel-container"> <!-- Ajusta el ancho según tus necesidades -->
+  <div class="carousel-container"> 
     <div class="carousel-slide">
       <img src={telco.src} alt="Redes Telco" />
       <h1 style="position: absolute; top: 35%; left: 7%; " class="text-white font-bold text-3xl line-clamp-12 text-center">En<p class="text-teal-400"> Telco Networks</p> somos una empresa reconocida <p></p> con mas de 30 años de experiencia <p></p> en el mundo de las <p class="text-teal-400"> Telecomunicaciones</p></h1>
@@ -75,27 +75,29 @@ import t2 from "assets/t2.jpg"
   
 
   <div class="mx-auto pt-12 lg:py-16">
-    <p class="text-center text-4xl font-bold">Soluciones y Servicios</p>
+    <br>
+    <br>
+    <p class="text-center text-5xl font-bold">Soluciones y Servicios</p>
     <br>
     <br>
     <div class="grid grid-cols-2 gap-0.5 lg:mt-8 md:grid-cols-4 mt-4">
       <div class="flex flex-col items-center col-span-1 px-8">
-        <a href="/blog" ><img alt="Camaras de seguridad Telco" src={camara.src} /></a>
+        <a href="/blog" ><img alt="Camaras de seguridad Telco" src={camara.src} style="max-width: 92px;"/></a>
         <br>
         <a href="/blog" class="text-center font-bold text-2xl">CCTV/IP</a>
       </div>
       <div class="flex flex-col items-center col-span-1 px-8">
-        <a href="/blog" ><img alt="Control de Acceso Telco" src={acceso.src} /></a>
+        <a href="/blog" ><img alt="Control de Acceso Telco" src={acceso.src} style="max-width: 92px;"/></a>
         <br>
         <a href="/blog" class="text-center font-bold text-2xl">Control de Acceso</a>
       </div>
       <div class="flex flex-col items-center col-span-1 px-8">
-        <a href="/blog" ><img alt="Control de Acceso Telco" src={antena.src} /></a>
+        <a href="/blog" ><img alt="Control de Acceso Telco" src={antena.src} style="max-width: 92px;" /></a>
         <br>
         <a href="/blog" class="text-center font-bold text-2xl">Fibra Óptica y Cableado</a>
       </div>
       <div class="flex flex-col items-center col-span-1 px-8">
-        <a href="/blog" ><img alt="Control de Acceso Telco" src={proteger.src} /></a>
+        <a href="/blog" ><img alt="Control de Acceso Telco" src={proteger.src} style="max-width: 92px;" /></a>
         <br>
         <a href="/blog" class="text-center font-bold text-2xl">Seguridad Perimetral</a>
       </div>
@@ -107,9 +109,10 @@ import t2 from "assets/t2.jpg"
   .carousel-container {
     position: relative;
     width: 100%;
-    max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
-    height: auto; /* Ajusta la altura automáticamente según el contenido */
+    max-width: 100%; 
+    height: auto; 
     overflow: hidden;
+    
   }
 
   .carousel-slide {
@@ -117,25 +120,29 @@ import t2 from "assets/t2.jpg"
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    height: 84vh;
+    height: 75vh;
     margin-left: 0;
     margin-right: 0;
-    display: none; /* Oculta todas las imágenes por defecto */
+    display: none;
+    transition: 2s ease;
+
   }
 
   .carousel-slide.active {
-    display: block; /* Muestra solo la imagen activa */
+    display: block; 
+    
   }
 
   .carousel-slide img {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-    height: 100%; /* Ajusta la altura para que ocupe todo el contenedor */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: 2s ease;
   }
 
   .carousel-button-prev, .carousel-button-next {
     position: absolute;
-    top: 55%;
+    top: 48%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
@@ -143,9 +150,9 @@ import t2 from "assets/t2.jpg"
     padding: 10px;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%; /* Bordes redondeados */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Sombra */
-    transition: background-color 0.3s, transform 0.3s; /* Transición al hacer hover */
+    border-radius: 50%; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); 
+    transition: background-color 0.3s, transform 0.3s; 
   }
 
   .carousel-button-prev:hover, .carousel-button-next:hover {
