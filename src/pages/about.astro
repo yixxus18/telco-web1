@@ -9,11 +9,21 @@ import fondito from "assets/cables.webp";
 ---
 
 <Layout title="Nosotros">
-  <div style={`position: relative; background-image: url(${fondito.src}); background-attachment: fixed; background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`}>
+  <div style={`position: relative; background-image: url(${fondito.src}); background-attachment: fixed; background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`} class="desktop">
     <div style="background-color: rgba(0, 0, 0, 0.3); position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></div>
     
     <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 100%;">
-      <h2 class="font-bold text-6xl text-gray-800 text-center text-white" style="filter: none;">
+      <h2 class="font-bold text-6xl text-center text-white" style="filter: none;">
+        Trayectoria
+      </h2>
+    </div>
+  </div>
+
+  <div style={`position: relative; background-image: url(${fondito.src});  background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`} class="mobile">
+    <div style="background-color: rgba(0, 0, 0, 0.3); position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></div>
+    
+    <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 100%;">
+      <h2 class="font-bold text-6xl text-center text-white" style="filter: none;">
         Trayectoria
       </h2>
     </div>
@@ -48,27 +58,25 @@ import fondito from "assets/cables.webp";
     </div>
     <br><br>
     <img src={cableado.src} class="mx-auto rounded-xl hover:shadow-lg transition:transform hover:scale-110 hover:saturate-150" style="width: 600px; height: 250px; border-radius: 25px;">
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 font-poppins text-justify">
-      <h2 class="font-bold text-5xl text-gray-800 text-center">
-        Historia
-      </h2>
-      <p class="text-2xl leading-relaxed text-slate-500 font-poppins">
-        <p></p>
-        Telco Networks se especializa en el diseño y gestión de soluciones integrales en telecomunicaciones, cableado estructurado, sistemas de seguridad, telefonía digital, equipo activo, calidad de la energía, y sistemas de detección y supresión de incendios. Con más de 30 años de experiencia, ha ejecutado proyectos exitosos en sectores como el bancario, comercial, manufacturero, y gubernamental.
-        <p></p>
-Desde sus inicios, Telco Networks se ha comprometido a ofrecer soluciones tecnológicas innovadoras y personalizadas, estableciendo relaciones duraderas con sus clientes. Su capacidad para adaptarse a las necesidades del mercado y mantener la vanguardia tecnológica ha sido clave para su éxito.
-        <p></p>
-La empresa destaca por su dedicación a la calidad y la innovación, consolidándose como un socio confiable que contribuye al crecimiento y logro de los objetivos de sus clientes. En Telco Networks, seguimos liderando con excelencia, siendo el aliado que nuestros clientes necesitan para prosperar en un entorno tecnológico en constante evolución.
-      </p>
-    </div>
+  
     <br>
     <br>
   </Container>
-  <div style={`position: relative; background-image: url(${fondito2.src}); background-attachment: fixed; background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`}>
+  <div style={`position: relative; background-image: url(${fondito2.src}); background-attachment: fixed; background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`} class="desktop">
     <div style="background-color: rgba(0, 0, 0, 0.3); position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></div>
     
     <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 100%;">
-      <h2 class="font-bold text-6xl text-gray-800 text-center text-white" style="filter: none;">
+      <h2 class="font-bold text-6xl text-center text-white" style="filter: none;">
+        Nuestros Ideales
+      </h2>
+    </div>
+  </div>
+
+  <div style={`position: relative; background-image: url(${fondito2.src}); background-size: cover; background-position: center; height: 50vh; margin-left: 0; margin-right: 0;`} class="mobile">
+    <div style="background-color: rgba(0, 0, 0, 0.3); position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></div>
+    
+    <div style="position: relative; display: flex; justify-content: center; align-items: center; height: 100%;">
+      <h2 class="font-bold text-6xl text-center text-white" style="filter: none;">
         Nuestros Ideales
       </h2>
     </div>
@@ -82,9 +90,21 @@ La empresa destaca por su dedicación a la calidad y la innovación, consolidán
 </Layout>
 
 
-
-
-
-
-
-             
+<style>
+  @media (max-width: 600px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+  }
+  @media (min-width: 601px) {
+    .desktop {
+      display: block;
+    }
+    .mobile {
+      display: none;
+    }
+  }
+</style>

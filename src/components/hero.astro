@@ -2,19 +2,17 @@
 
 import heroImage1 from "assets/telecomunicaciones.jpg";
 
-import heroImage4 from "assets/ups.jpg"; // Asegúrate de tener más imágenes
+import heroImage4 from "assets/ups1.jpg"; // Asegúrate de tener más imágenes
 
 import antena from "assets/optics.png";
 
 import ant from "assets/ant.jpg";
 
-import servidor from "assets/bm.jpg";
+import servidor from "assets/bm1.jpg";
 
-import redes from "/public/red.jpg";
+import hombre from "assets/hombre2.jpg";
 
-import hombre from "assets/hombre.jpg";
-
-import camcarrousel from "assets/camarita.jpg";
+import camcarrousel from "assets/camarita1.jpg";
 
 import camara from "assets/cams.png";
 
@@ -23,15 +21,13 @@ import acceso from "assets/cyber-security.png";
 import proteger from "assets/shield.png";
 
 import telco from "assets/tecis.jpg"
-
-import t2 from "assets/t2.jpg"
 ---
 
 <div>
   <div class="carousel-container"> 
     <div class="carousel-slide">
       <img src={telco.src} alt="Redes Telco" />
-      <h1 style="position: absolute; top: 35%; left: 7%; " class="text-white font-bold text-3xl line-clamp-12 text-center">En<p class="text-teal-400"> Telco Networks</p> somos una empresa reconocida <p></p> con mas de 30 años de experiencia <p></p> en el mundo de las <p class="text-teal-400"> Telecomunicaciones</p></h1>
+      <h5 style="position: absolute; top: 35%; left: 7%; " class="text-white font-bold text-3xl line-clamp-12 text-center">En<p class="text-teal-400">Telco Networks</p> somos una empresa reconocida <p></p> con mas de 30 años de experiencia <p></p> en el mundo de las <p class="text-teal-400"> Telecomunicaciones</p></h5>
       
     </div>
     <div class="carousel-slide">
@@ -177,6 +173,16 @@ import t2 from "assets/t2.jpg"
     display: block;
   }
 }
+
+@media (max-width: 640px) {
+    .carousel-container {
+      display: block; /* Muestra el carousel arriba */
+    }
+
+    .mx-auto {
+      display: block; /* Muestra el texto debajo del carousel */
+    }
+  }
 </style>
 
 <script>
